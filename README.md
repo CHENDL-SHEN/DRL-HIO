@@ -24,3 +24,16 @@ The multi-span transport equipment in steelmaking and continuous casting (SCC) u
 - Constraint-Aware $A^*$ (scheduler/upper_planner.py): Computes real-time routing costs by factoring in dynamic edge-congestion coefficients ($\gamma_{load}$) alongside structural transfer penalties ($P_{trans}$).
 - Action Masking Safety Shield (scheduler/middle_agent.py): Intercepts reinforcement learning policies via bounding-box predictive intersection sweeps to mask unsafe assignments ($-\infty$) before physical execution.
 - CPER Buffer (training/replay_buffer.py): Dynamically balances state-action pairs using a risk factor ($\rho$) to sample high-conflict configurations, significantly speeding up policy convergence.
+
+# Results
+- DRL-HIO can actively trigger dwelling avoidance when approaching head-on at about 10 minutes; and achieve dynamic following and yielding when moving in the same direction at about 30 minutes, as shown in this image. DRL-HIO exchanges local short-term waiting and local action masking for the smoothness of global transportation.
+<img width="4806" height="2131" alt="3" src="https://github.com/user-attachments/assets/72f69c7d-3145-4ddb-8c66-d9441024d6f9" />
+
+<br>
+
+- The baseline model has low exploration efficiency in confined spaces, suffers continuous penalties due to frequently triggering illegal actions such as crossing boundaries, and its cumulative reward remains below -1000 for a long time with severe oscillations, barely converging until 45,000 steps.
+- In contrast, the physical prior features and action masking mechanism of AM-SP achieve hard constraints on local actions, completely avoiding illegal trial and error. It achieves smooth and rapid convergence at approximately 8,000 steps, with the task completion rate firmly maintained at 100%, and the loss curve descends more smoothly. This indicates that AM-SP improves sample learning efficiency and policy convergence stability under severe constraints, as shown in these image.
+
+<img width="8289" height="4596" alt="11-4a" src="https://github.com/user-attachments/assets/3e8db160-e633-4843-b128-477cd08df4e2" />
+
+<img width="9035" height="4441" alt="11-4b" src="https://github.com/user-attachments/assets/d29bfa7e-e0f5-4b23-9d67-619282e12fc7" />
