@@ -7,7 +7,7 @@ The multi-span transport equipment in steelmaking and continuous casting (SCC) u
 
 <br>
 
-## Prerequisite
+# Prerequisite
 - Ensure you have Python 3.8+ installed along with the required dependencies: pip install torch numpy pandas networkx matplotlib seaborn
 - Generate the benchmark scheduling tasks (under strict No-Wait and resource mutation constraints): python utils/task_generator.py
 - Train the mid-level scheduling agent using the Conflict-Prioritized Experience Replay (CPER) mechanism: python train_dqn.py
@@ -20,7 +20,7 @@ The multi-span transport equipment in steelmaking and continuous casting (SCC) u
      python plot_cma_trajectory.py   
      python plot_cma_idle_yielding.py
 
-## Core Methodologies Implemented
+# Core Methodologies Implemented
 - Constraint-Aware $A^*$ (scheduler/upper_planner.py): Computes real-time routing costs by factoring in dynamic edge-congestion coefficients ($\gamma_{load}$) alongside structural transfer penalties ($P_{trans}$).
 - Action Masking Safety Shield (scheduler/middle_agent.py): Intercepts reinforcement learning policies via bounding-box predictive intersection sweeps to mask unsafe assignments ($-\infty$) before physical execution.
 - CPER Buffer (training/replay_buffer.py): Dynamically balances state-action pairs using a risk factor ($\rho$) to sample high-conflict configurations, significantly speeding up policy convergence.
