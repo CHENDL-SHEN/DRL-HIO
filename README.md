@@ -31,8 +31,7 @@ The multi-span transport equipment in steelmaking and continuous casting (SCC) u
 
 <br>
 
-- The baseline model has low exploration efficiency in confined spaces, suffers continuous penalties due to frequently triggering illegal actions such as crossing boundaries, and its cumulative reward remains below -1000 for a long time with severe oscillations, barely converging until 45,000 steps.
-- In contrast, the physical prior features and action masking mechanism of AM-SP achieve hard constraints on local actions, completely avoiding illegal trial and error. It achieves smooth and rapid convergence at approximately 8,000 steps, with the task completion rate firmly maintained at 100%, and the loss curve descends more smoothly. This indicates that AM-SP improves sample learning efficiency and policy convergence stability under severe constraints, as shown in these image.
+
 
 <img width="8289" height="4596" alt="11-4a" src="https://github.com/user-attachments/assets/3e8db160-e633-4843-b128-477cd08df4e2" />
 
