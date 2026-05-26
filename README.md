@@ -36,4 +36,3 @@ The multi-span transport equipment in steelmaking and continuous casting (SCC) u
 
 <img width="8289" height="4596" alt="11-4a" src="https://github.com/user-attachments/assets/3e8db160-e633-4843-b128-477cd08df4e2" />
 
-<img width="9035" height="4441" alt="11-4b" src="https://github.com/user-attachments/assets/d29bfa7e-e0f5-4b23-9d67-619282e12fc7" />
