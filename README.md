@@ -31,7 +31,7 @@ The multi-span transport equipment in steelmaking and continuous casting (SCC) u
 
 <br>
 
-
+- The baseline model has low exploration efficiency in confined spaces, suffers continuous penalties   due to frequently triggering illegal actions such as crossing boundaries, and its cumulative reward remains below -1000 for a long time with severe oscillations, barely converging until 45,000 steps.
 
 <img width="8289" height="4596" alt="11-4a" src="https://github.com/user-attachments/assets/3e8db160-e633-4843-b128-477cd08df4e2" />
 
